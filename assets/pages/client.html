@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="client.css">
+    <link rel="stylesheet" href="style.css">
+    <title>Espace client</title>
+</head>
+
+<body>
+    <ul class="header">
+        <li>
+            <a href="Index.html">
+                <div class="boite">
+                    <div class="accueil"></div>
+                </div>
+            </a>
+        </li>
+        <li>
+            <a href="inscription.html">
+                <div class="boite">
+                    <div class="connexion"></div>
+                </div>
+            </a>
+        </li>
+        <li>
+            <a href="Panier.html">
+                <div class="boite">
+                    <div class="panier"></div>
+                </div>
+            </a>
+        </li>
+    </ul>
+
+    <div class="menu">
+        <a href="MonParcours.html">
+            <div class="boxMenu">
+                <div>Mon parcours</div>
+            </div>
+        </a>
+        <a href="Boutique_cours.html">
+            <div class="boxMenu">
+                <div>Boutique cours</div>
+            </div>
+        </a>
+        <a href="Boutique_flûte.html">
+            <div class="boxMenu">
+                <div>Boutique flûte</div>
+            </div>
+        </a>
+        <a href="client.html">
+            <div class="boxMenu">
+                <div>Espace client</div>
+            </div>
+        </a>
+    </div>
+
+    <br>
+
+    <div class="col">
+        <nav class="menuClient">
+            <a class="block" href="#calendrier">Calendrier des cours prévus</a>
+            <a class="block" href="#suivi">Suivi de commande</a>
+            <a class="block" href="#contact">Contact</a>
+            <a class="block" href="#manager">Manager les cours</a>
+            <a class="block" href="#infos">Infos Perso</a>
+            <a class="block" href="#historique">Historique</a>
+            <a class="block" href="admin.html">Admin</a>
+        </nav>
+    </div>
+
+    <div class="bodyStyle">
+        <iframe id="calendrier"
+            src="https://calendar.google.com/calendar/embed?src=lj34l3pq8hc85e69cgsjnd38uo%40group.calendar.google.com&ctz=Europe%2FParis"
+            style="border: 0" width="700" height="600" frameborder="0" scrolling="no"></iframe>
+    </div>
+
+    <div class="bodyStyle">
+        <h1 id="suivi" class="suivih1">Suivi de commande</h1>
+    </div>
+
+    <div class="bodyStyle">
+        <div class="item1">
+            <p>Cours de flute</p>
+            <img class="imageFlute" src="flute.jpeg" height="100%" width="100%" alt="flute">
+            <p>Solfège</p>
+            <p>En cours</p>
+        </div>
+        <div class="item1">
+            <p>Achat de flute</p>
+            <img class="imageFlute" src="flute2.jpeg" alt="flute">
+            <p>Achat CB</p>
+            <p>En cours</p>
+        </div>
+        <div class="item2">
+            <p>Achat de flute</p>
+            <img class="imageFlute" src="flute3.jpg" alt="flute">
+            <p>Achat CB</p>
+            <p>Livré</p>
+        </div>
+    </div>
+
+    <div class="bodyStyle">
+        <h1 id="contact" class="contacth1">Contact</h1>
+    </div>
+
+    <form action="" class="bodyStyle">
+        <div class="chat1">
+            <textarea name="contactprof" id="contactprof" cols="30" rows="10"
+                placeholder="Entrer votre message ici"></textarea>
+        </div>
+    </form>
+    <form action="" class="bodyStyle">
+        <div class="chat2">
+            <input type="submit" id="contactprof" name="contactprof">
+        </div>
+    </form>
+
+    <div class="bodyStyle">
+        <h1 id="manager" class="managerh1">Manager les cours</h1>
+    </div>
+
+    <div class="bodyStyle">
+        <div class="histo1">
+            <p>Lundi 27 mars 2012</p>
+            <span>18h-19h</span>
+            <span>Cours de flute</span>
+            <div class="bodyStyle">
+                <div class="bouton1"><span bouton3="Annuler le cours"><img class="imageBouton2" src="croix.jpeg"
+                            alt="croix" height="100%" width="100%"></span></div>
+                <div class="bouton2"><span bouton3="Modifier le cours"><img class="imageBouton2" src="modifier.png"
+                            alt="crayon" height="100%" width="100%"></span></div>
+            </div>
+        </div>
+        <div class="histo1">
+            <p>Lundi 30 mars 2012</p>
+            <span>15h-17h</span>
+            <span>Cours de Guitare</span>
+            <div class="bodyStyle">
+                <div class="bouton1"><span bouton3="Annuler le cours"><img class="imageBouton" src="croix.jpeg"
+                            alt="croix" height="100%" width="100%"></span></div>
+                <div class="bouton2"><span bouton3="Modifier le cours"><img class="imageBouton" src="modifier.png"
+                            alt="crayon" height="100%" width="100%"></span></div>
+            </div>
+        </div>
+        <div class="histo2">
+            <p>Lundi 3 Avril 2012</p>
+            <span>14h-15h</span>
+            <span>Cours de Guitare</span>
+            <div class="bodyStyle">
+                <div class="bouton1"><span bouton3="Annuler le cours"><img class="imageBouton" src="croix.jpeg"
+                            alt="croix" height="100%" width="100%"></span></div>
+                <div class="bouton2"><span bouton3="Modifier le cours"><img class="imageBouton" src="modifier.png"
+                            alt="crayon" height="100%" width="100%"></span></div>
+            </div>
+        </div>
+    </div>
+
+    <div class="bodyStyle">
+        <h1 class="infosh1" id="infos">Infos Perso</h1>
+    </div>
+
+    <div class="bodyStyle2">
+        <form action="">
+            <fieldset>
+                <ol>
+                    <div class="formstyle">
+                        <li><label for="nom">Nom :</label></li>
+                        <input type="text" placeholder="Nom" id="nom" name="nom">
+                        <li><label for="prenom">Prénom :</label></li>
+                        <input type="text" placeholder="Prénom" id="prenom" name="prenom">
+                        <li><label for="adresse">Adresse :</label></li>
+                        <textarea name="adresse" id="adresse" cols="30" rows="10"></textarea>
+                        <li><label for="mdp">Mot de passe :</label></li>
+                        <input type="password" placeholder="Mot de passe" id="mdp" name="mdp">
+                        <li><label for="mdp2">Confirmer Mot de passe :</label></li>
+                        <input type="password" placeholder="Mot de passe" id="mdp2" name="mdp2">
+                    </div>
+                </ol>
+
+            </fieldset>
+        </form>
+        <div class="formstyle">
+            <form action="">
+                <fieldset>
+                    <ol>
+                        <div class="formstyle">
+                            <li><label for="email">Email :</label></li>
+                            <input type="email" placeholder="Email" id="email" name="email">
+                            <li><label for="tel">Telephone Portable</label></li>
+                            <input type="text" placeholder="Portable" id="tel" name="tel">
+                            <li><label for="tel2">Telephone Fixe</label></li>
+                            <input type="text" placeholder="Fixe" name="tel2" id="tel2">
+                        </div>
+                    </ol>
+                </fieldset>
+            </form>
+            <div class="cb">
+                <form action="" class="cbstyle">
+                    <p>Coordonné bancaire</p>
+                    <label for="nomcomplet">Nom Complet :</label>
+                    <input type="text" id="nomcomplet" name="nomcomplet" placeholder="Nom Complet">
+                    <label for="cbnum">Numéro de la carte :</label>
+                    <input type="text" id="cbnum" name="cbnum" placeholder="Numéro ici">
+                    <label for="datecb">Date d'expiration</label>
+                    <input type="month" name="datecb" id="datecb" />
+                </form>
+            </div>
+
+            <br>
+
+            <form action="">
+                <div class="boutonstyle">
+                    <input type="submit">
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <div class="bodyStyle">
+        <h1 class="historiqueh1" id="historique">Historique D'achat</h1>
+    </div>
+
+    <div class="bodyStyle">
+        <div class="tableplace">
+            <table>
+                <thead>
+                    <tr>
+                        <th>Type D'achat</th>
+                        <th>Option paiement</th>
+                        <th>Date D'achat</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <th>Cours de flute</th>
+                        <td>CB</td>
+                        <td>22/03/2012</td>
+                    </tr>
+                    <tr>
+                        <th>Achat de flute</th>
+                        <td>CB</td>
+                        <td>22/03/2012</td>
+                    </tr>
+                    <tr>
+                        <th>Cours de guitare</th>
+                        <td>Espece</td>
+                        <td>10/04/2012</td>
+                    </tr>
+                    <tr>
+                        <th>Cours de guitare</th>
+                        <td>CB</td>
+                        <td>22/04/2012</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+    <br>
+
+    <ul class="footer">
+        <li>
+            <div class="email">adresse.mail@hotmail.fr<p>06.06.06.06.06</p>
+            </div>
+        </li>
+        <li><a href="#">
+                <div class="icones"><img src="facebook.png" alt="facebook" width="100%" height="100%" /></div>
+            </a></li>
+        <li><a href="#">
+                <div class="icones"><img src="insta.png" alt="insta" width="100%" height="100%" /></div>
+            </a></li>
+        <li><a href="#">
+                <div class="icones"><img src="twitter.png" alt="twitter" width="100%" height="100%" /></div>
+            </a></li>
+    </ul>
+
+
+
+</body>
+
+</html>
