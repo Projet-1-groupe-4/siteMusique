@@ -504,3 +504,48 @@ a:visited {
     display: grid;
     grid-template-columns: auto auto;
 }
+
+/* Media queries */
+@media screen and (max-width: 1600px) {
+    .momentsCle {
+        all: unset;
+    }
+    .mcle1 {
+        display: none;
+    }
+    .mcle2 {
+        flex-wrap: wrap;
+        justify-content: space-around;
+    }
+    .c {
+        all: unset;
+        margin-top: 20%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+    }
+    .field1 {
+        all: unset;
+    }
+    .field2 {
+        all: unset;
+    }
+    .newsFeed {
+        width: 50%;
+        margin: auto;
+    }
+
+    .topVente {
+        width: 50%;
+        margin: auto;
+    }
+}
+
+@media screen and (max-width: 675px) {
+    .mcle2 a {
+        margin-top: 10em;
+    }
+    .footer {
+        margin-top: 5%;
+    }
+}
