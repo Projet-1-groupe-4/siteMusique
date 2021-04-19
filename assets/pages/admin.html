@@ -4,136 +4,210 @@
         <meta charset="UTF-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel="stylesheet" href="style.css">
-        <link rel="stylesheet" href="client.css">
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-eOJMYsd53ii+scO/bJGFsiCZc+5NDVN2yr8+0RDqr0Ql0h+rP48ckxlpbzKgwra6" crossorigin="anonymous">
         <title>Espace admin</title>
     </head>
 
     <body>
-        <div class="col">
-            <nav class="menuClient">
-                <a class="block" href="#calendrier">Calendrier des cours prévus</a>
-                <a class="block" href="#news">MAJ News</a>
-                <a class="block" href="#contact">Contact</a>
-                <a class="block" href="#manager">Manager les cours</a>
-                <a class="block" href="#infos">Infos Perso</a>
-                <a class="block" href="#historique">Historique Transaction</a>
-                <a class="block" href="client.html">Retour</a>
-            </nav>
-        </div>
-        
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+            <a class="navbar-brand" href="#">Menu</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+              <ul class="navbar-nav">
+                <li class="nav-item">
+                  <a class="nav-link" href="assets/pages/parcoursBOOTSTRAP.html">Mon parcours</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="assets/pages/Boutique_cours.html">Boutique cours</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="assets/pages/Boutique_flûte.html">Boutique flûte</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="assets/pages/client.html">Espace client</a>
+                </li>
+              </ul>
+            </div>
+        </nav>
+        <div class="sticky-top"><div class="dropdown">
+            <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenu2" data-bs-toggle="dropdown" aria-expanded="false">
+            Administration
+            </button>
+            <ul class="dropdown-menu" aria-labelledby="dropdownMenu2">
+              <li><button class="dropdown-item" type="button"><a href="#calendrier" class="text-reset">Calendrier</a></button></li>
+              <li><button class="dropdown-item" type="button"><a href="#MAJ" class="text-reset">MAJ News</a></button></li>
+              <li><button class="dropdown-item" type="button"><a href="#contact" class="text-reset">Contact</a></button></li>
+              <li><button class="dropdown-item" type="button"><a href="#cours" class="text-reset">Manager les cours</a></button></li>
+              <li><button class="dropdown-item" type="button"><a href="#infos" class="text-reset">Infos perso</a></button></li>
+              <li><button class="dropdown-item" type="button"><a href="#achats" class="text-reset">Historique d'achats</a></button></li>
+              <li><button class="dropdown-item" type="button"><a href="admin1.html" class="text-reset">Retour</a></button></li>
+
+            </ul>
+          </div></div>
+
         <div class="container-fluid">
-            <div class="row">
-                <div class="col">
-                    <!--CALENDRIER-->
+
+            <!--CALENDRIER-->
+            <div class="row mx-5 my-5 g-3">
+                <div class="col-12">
+                    <h1 id="calendrier">Calendrier</h1>
+                </div>
+                <div class="col w-100">
                     <iframe id="calendrier"
-            src="https://calendar.google.com/calendar/embed?src=lj34l3pq8hc85e69cgsjnd38uo%40group.calendar.google.com&ctz=Europe%2FParis"
-            style="border: 0" width="700" height="600" frameborder="0" scrolling="no"></iframe>
-                </div>
+                    src="https://calendar.google.com/calendar/embed?src=lj34l3pq8hc85e69cgsjnd38uo%40group.calendar.google.com&ctz=Europe%2FParis"
+                    style="border: 0" class="w-100" frameborder="0" scrolling="no"></iframe>
+                </div> 
             </div>
 
-    
-            <div class="row">
+            <!--MAJ NEWS-->
+            <div class="row mx-5 my-5 g-3">
+                <div class="col-12">
+                    <h1 id="MAJ">MAJ News</h1>
+                </div>
+                
+                <div class="col-12">
+                    <textarea name="majnews" id="majnews" class="w-100" rows="5" placeholder="MAJ News ici"></textarea>
+                </div>
+            
                 <div class="col">
-                    <h1>MAJ News</h1>
-
-                    <textarea name="majnews" id="majnews" cols="70" rows="20" placeholder="MAJ News ici"></textarea>
+                    <form action="">
+                        <label for="fichier">Ajouter image :</label>
+                        <input type="file" id="fichier" name="fichier">
+                    </form>            
+                    <form action="">
+                    <input type="submit" id="majnews" name="majnews">
+                    </form>
+                </div>   
             </div>
-    
-            <form action="" class="newMarg">
-                <label for="fichier">Ajouter image :</label>
-                <input type="file" id="fichier" name="fichier">
-            </form>
-            <form action="">
-                <input type="submit" id="majnews" name="majnews">
-            </form>
-            
-            <br />
 
-            <div class="row">
-                <div class="col px-5">
-                    <!--CONTACT-->
-                    <h1>Contact</h1>
-                    <form action="">
-                            <textarea name="contactprof" id="contactprof" cols="30" rows="10" placeholder="Entrer votre message ici"></textarea>
-                            <div class="menuDeroulant">
-                                <label for="eleve">Choisir un élève :</label>
-                                <select name="eleve" id="eleve">
-                                    <option value="Paul">Paul</option>
-                                    <option value="Kevin">Kevin</option>
-                                    <option value="Jean">Jean</option>
-                                    <option value="Pierre">Pierre</option>
-                                </select>
-                            </div>
-                        </div>
-                    </form>
-
-                    <form action="">
-                            <input type="submit" id="contactprof" name="contactprof">
-                        </div>
-                    </form>
-
-                    <br />
-
+            <!--CONTACT-->
+            <div class="row mx-5 my-5 g-3">
+                <div class="col-12">
+                    <h1 id="contact">Contact</h1>
                 </div>
-            </div>
+                    
+                <div class="col-12">
+                    <textarea name="contactprof" id="contactprof" class="w-100" rows="5" placeholder="Entrer votre message ici"></textarea>
+                </div>
 
-            <div class="row">
+
                 <div class="col">
-                    <!--MANAGER LES COURS-->
+                    <div class="menuDeroulant">
+                        <label for="eleve">Choisir un élève :</label>
+                            <select name="eleve" id="eleve">
+                                <option value="Paul">Paul</option>
+                                <option value="Kevin">Kevin</option>
+                                <option value="Jean">Jean</option>
+                                <option value="Pierre">Pierre</option>
+                            </select>                    
+                            <form action="">
+                                <input type="submit" id="contactprof" name="contactprof">
+                            </form>
+                    </div>
+                    
                 </div>
+
             </div>
 
-            <div class="row">
-                <div class="col px-5">
-                    <!--INFOS PERSO-->
-                    <form action="">
-                        <fieldset>
-                            <div class="">
-                                <label for="emailProf">Email :</label>
-                                <input type="text" name="emailProf" id="emailProf">
-                                <label for="numProf">Numero :</label>
-                                <input type="text" id="numProf" name="numProf" placeholder="Numéro">
-                                <label for="numfixeProf">Numéro fixe :</label>
-                                <input type="text" id="numfixeProf" name="numfixeProf" placeholder="Numéro fixe">
-                            </div>
-            
-                            <br>
-            
-                            <div class="">
-                                <label for="insta">Insta :</label>
-                                <input type="text" id="insta" name="insta">
-                                <label for="facebook">Facebook :</label>
-                                <input type="text" id="facebook" name="facebook">
-                                <label for="twitter">Twitter :</label>
-                                <input type="text" id="twitter" name="twitter">
-                            </div>
-            
-                            <div class="">
-                                <p>Coordonné bancaire :</p>
-                                <div>
-                                    <label for="iban">IBAN :</label>
-                                    <input type="text" name="iban" id="iban">
-                                    <label for="bic">BIC :</label>
-                                    <input type="text" name="bic" id="bic">
-                                </div>
-                            </div>
-                        </fieldset>
-            
-                        <br>
-            
-                        <div class="">
-                            <input type="submit">
-                        </div>
-                    </form>
+
+            <!--MANAGER LES COURS-->
+            <div class="row mx-5 my-5 g-3">
+                <div class="col-12">
+                    <h1 id="cours">Manager les cours</h1>
                 </div>
+                <div class="col-md-4">
+                    <blockquote class="border border-dark">
+                            <p>Lundi 27 Mars 2012</p>
+                            <span>18h-19h</span>
+                            <span>Cours de flûte</span> <br />
+                            <button type="button" class="btn-close" aria-label="Close"></button><button><img src="../assets/img/modifier.png" alt="crayon" height="25" width="25"></button>
+                    </blockquote>
+                </div>
+
+                <div class="col-md-4">
+                    <blockquote class="border border-dark">
+                            <p>Lundi 30 Mars 2012</p>
+                            <span>15h-17h</span>
+                            <span>Cours de Guitare</span> <br />
+                            <button type="button" class="btn-close" aria-label="Close"></button><button><img src="../assets/img/modifier.png" alt="crayon" height="25" width="25"></button>
+                    </blockquote>
+                </div>
+
+                <div class="col-md-4">
+                    <blockquote class="border border-dark">
+                            <p>Lundi 3 Avril 2012</p>
+                            <span>14h-15h</span>
+                            <span>Cours de Guitare</span> <br />
+                            <button type="button" class="btn-close" aria-label="Close"></button><button><img src="../assets/img/modifier.png" alt="crayon" height="25" width="25"></button>
+                    </blockquote>
+                </div>
+         
+              
             </div>
 
-            <div class="row">
+
+            <!--INFOS PERSO-->
+            <div class="row mx-5 my-5 g-3">
+                <div class="col-12">
+                    <h1 id="infos">Infos perso</h1>
+                </div>
+
+                <div class="col-md-4">
+                    <label for="inputEmail4" class="form-label">Email</label>
+                    <input type="text" class="form-control" placeholder="@" aria-label="First name">
+                </div> 
+
+                <div class="col-md-4">
+                    <label for="inputEmail4" class="form-label">Numéro</label>
+                    <input type="text" class="form-control" placeholder="Numéro" aria-label="Last name">
+                </div>
+                
+                <div class="col-md-4">
+                    <label for="inputEmail4" class="form-label">Numéro fixe</label>
+                    <input type="text" class="form-control" placeholder="Numéro fixe" aria-label="First name">
+                </div>
+
+                <div class="col-md-4">
+                    <label for="inputEmail4" class="form-label">Insta</label>
+                    <input type="text" class="form-control" placeholder="" aria-label="Last name">
+                </div>
+
+                <div class="col-md-4">
+                        <label for="inputEmail4" class="form-label">Facebook</label>
+                        <input type="text" class="form-control" placeholder="" aria-label="First name">
+                </div>
+
+                <div class="col-md-4">
+                    <label for="inputEmail4" class="form-label">Twitter</label>
+                    <input type="text" class="form-control" placeholder="" aria-label="Last name">
+                </div>
+
+                <p class="fw-bold">Coordonnées bancaires</p>
+                <div class="col-md-6">
+                    <label for="inputEmail4" class="form-label">IBAN</label>
+                    <input type="text" class="form-control" placeholder="" aria-label="First name">
+                </div>
+
+                <div class="col-md-6">
+                    <label for="inputEmail4" class="form-label">BIC</label>
+                    <input type="text" class="form-control" placeholder="" aria-label="Last name">
+                </div>
+
+                <form action="">
+                    <input type="submit">
+                </form>
+
+                
+                        
+            <!--HISTORIQUE D'ACHAT-->
+            <div class="row ml-5 my-5 g-3">
+                <div class="col-12">
+                    <h1 id="achats">Historique d'achats</h1>
+                </div>
                 <div class="col">
-                    <!--HISTORIQUE D'ACHAT-->
-                    <h1>Historique d'achats</h1>
-                    <table>
+                    <table class="table table-bordered border-dark">
                         <thead>
                             <tr>
                                 <th>Type D'achat</th>
@@ -169,7 +243,10 @@
 
 
 
-            
         </div>
+
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/js/bootstrap.bundle.min.js" integrity="sha384-JEW9xMcG8R+pH31jmWH6WWP0WintQrMb4s7ZOdauHnUtxwoG2vI5DkLtS3qm9Ekf" crossorigin="anonymous"></script>
+
+        
     </body>
 </html>
